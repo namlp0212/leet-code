@@ -1,5 +1,11 @@
 package top_150_interview;
 
+import java.time.LocalDate;
+import java.time.*;
+import java.time.format.*;
+
+import java.util.*;
+
 public class d_Remove_Duplicates_II {
     public static int removeDuplicates(int[] nums) {
         int k = 1;
@@ -21,12 +27,5 @@ public class d_Remove_Duplicates_II {
         return k;
     }
 
-    public static void main(String[] args) {
-        int[] nums = {1,1,1,2,2,3};
 
-        int k = removeDuplicates(nums);
-        for (int i = 0; i < k; i++) {
-            System.out.print(nums[i] + " ");
-        }
-    }
 }
