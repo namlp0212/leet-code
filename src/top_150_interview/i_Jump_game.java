@@ -64,11 +64,16 @@ public class i_Jump_game {
             } else {
                 if (idx + val >= len - 1) return true;
                 int maxJump = 0;
-                for (int i = idx + val; i >= idx + 1; i--) {
-                    if (!check[i] && (i + nums[i] > maxJump)) {
-                        queue.add(i);
-                        check[i] = true;
+                int maxIdx = 0;
+
+                for (int i = idx+1; i <= idx + val; i++) {
+                    if (nums[i] + i > maxJump) {
+                        maxJump = nums[i] + i;
+                        maxIdx = i;
                     }
+                }
+                if (maxIdx != 0) {
+                    queue.add(maxIdx);
                 }
             }
         }
@@ -77,7 +82,7 @@ public class i_Jump_game {
     }
 
     public static void main(String[] args) {
-        int[] nums = {2, 3, 1, 1, 4};
+        int[] nums = {3, 2, 1, 0, 4};
         System.out.println(canJumpV2(nums));
     }
 }
