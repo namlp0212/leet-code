@@ -12,7 +12,7 @@ public class l_RandomizedSet {
     private Random rand;
 
     /** Khởi tạo cấu trúc dữ liệu. */
-    public RandomizedSet() {
+    public l_RandomizedSet() {
         nums = new ArrayList<>();
         map = new HashMap<>();
         rand = new Random();
