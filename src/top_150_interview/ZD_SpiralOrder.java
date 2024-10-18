@@ -1,7 +1,7 @@
 package top_150_interview;
 import java.util.*;
 
-public class SpiralOrder {
+public class ZD_SpiralOrder {
     public static List<Integer> spiralOrder(int[][] matrix) {
         return spiralOrder(matrix, 0, 0, matrix.length-1, matrix[0].length-1);
     }
