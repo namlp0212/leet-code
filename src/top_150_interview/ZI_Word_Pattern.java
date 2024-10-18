@@ -3,7 +3,7 @@ package top_150_interview;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ZH_Word_Pattern {
+public class ZI_Word_Pattern {
     public static boolean wordPattern(String pattern, String s) {
         String[] arrS = s.split(" ");
 
