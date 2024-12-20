@@ -3,10 +3,15 @@ package top_150_interview;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ZZV_kThSmallest {
-    public int kthSmallest(TreeNode root, int k) {
+public class ZZV_ValidBST {
+    public boolean isValidBST(TreeNode root) {
         List<Integer> list = visitTree(root);
-        return list.get(k-1);
+        for (int i = 1; i < list.size(); i++) {
+            if (list.get(i) <= list.get(i-1)) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public List<Integer> visitTree(TreeNode root) {
